@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
 
 *{
-  transition: all 0.5s ease;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body, html {
-  margin: 0;
-  padding: 0;
   font-family: 'Source Sans Pro', sans-serif;
+  color: #fff;
 }
 
 iframe{
@@ -24,12 +25,58 @@ iframe{
 
 header {
   position: absolute;
-  top:0; right:0;
-  width: 20vw;
-  height: 25vh;
   z-index: 99;
-  min-width: 300px;
-  min-height: 230px;
+  top: 0; right: 0;
+  width: 20vw;
+  height: auto;
+}
+
+header img{
+  width: 100%;
+  background-color: rgba(112, 46, 0, 0.7);
+  padding: 8vh 2vh 2vh 2vh;
+}
+
+header nav {
+  margin-top: -5px; /* Hack para sumir com espaço entre divs */
+  padding: 4%;
+  background-color: rgba(112, 46, 0, 0.4);
+  text-align: right;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-2em);
+  z-index: -1;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+}
+
+header:hover .menu {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s;
+  /* this removes the transition delay so the menu will be visible while the other styles transition */
+}
+
+nav ul,
+nav ul li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a{
+  font-weight: 700;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+  padding: 0 5%;
+}
+
+nav ul li a:hover{
+  background-color: rgba(112, 46, 0, 0.7);
 }
 
 main {
