@@ -311,45 +311,6 @@ ul,
 ol {
   padding-left: 40px;
 }
-html,
-body {
-  height: 100%;
-  overflow-x: hidden;
-  text-align: center;
-  font: 400 100% 'Raleway', 'Lato';
-  color: #fff;
-}
-body {
-  padding-bottom: 60px;
-  background: url('../Imgs/SVG/Teste_home.svg');
-  background-size: cover;
-}
-h1 {
-  font-weight: 700;
-  font-size: 310%;
-}
-h2 {
-  font-weight: 400;
-  font-size: 120%;
-  color: #71AD37;
-}
-header .logo {
-  position: absolute;
-  z-index: 99;
-  top: 0; right: 0;
-  background-color: rgba(112, 46, 0, 0.7);
-  padding: 5vh 2vh 2vh 2vh;
-  width: 200px;
-  height: auto;
-}
-main{
-    height: 100vh;
-    width: 100vw;
-    margin:10vh 10vw;
-    text-align: center;
-    display:table-cell;
-    vertical-align:middle;
-}​
 #slider1 {
   margin: 20px;
   font-family: 'Lato';
