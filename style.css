@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+iframe{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 177vh;
+  height: 56vw;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+header {
+  position: absolute;
+  top:0; right:0;
+  width: 20vw;
+  height: 20vh;
+  z-index: 99;
+}
+
+main {
+  position: absolute;
+  top:0; left:0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.layer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  min-width: 100vw; min-height: 100vh;
+  overflow: hidden;
+}
