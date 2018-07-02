@@ -26,8 +26,10 @@ header {
   position: absolute;
   top:0; right:0;
   width: 20vw;
-  height: 20vh;
+  height: 25vh;
   z-index: 99;
+  min-width: 300px;
+  min-height: 230px;
 }
 
 main {
