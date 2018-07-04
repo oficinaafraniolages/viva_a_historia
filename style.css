@@ -31,18 +31,16 @@ header {
   position: absolute;
   z-index: 99;
   top: 0; right: 0;
-  width: 20vw;
+  width: 25vw;
   height: auto;
 }
 
 header img{
   width: 100%;
-  background-color: rgba(112, 46, 0, 0.7);
-  padding: 8vh 2vh 2vh 2vh;
 }
 
 header nav {
-  margin-top: -4px; /* Hack para sumir com espaço entre divs */
+  margin-top: -5px; /* Hack para sumir com espaço entre divs */
   padding: 4%;
   background-color: rgba(112, 46, 0, 0.4);
   text-align: right;
@@ -118,6 +116,37 @@ main {
   top: -1.5vw; left: -1.5vw;
 }
 
+/* introdução */
+
+.intro {
+  background-color: rgba(0,0,0,0.6);
+  z-index: 999;
+  padding: 15vh 25vw;
+  text-align: center;
+}
+
+.intro .logo {
+  width: 25vw;
+  padding: 10vh 1vw 1vw 1vw;
+}
+
+.intro section {
+  width: 25vw;
+  margin: 0 auto;
+  padding: 1vh 2.5vw;
+  text-align: left;
+}
+
+.intro div {
+  display: inline-block;
+  clear: both;
+  margin: 0 auto;
+  padding: 1vh 2vw;
+  margin-top: 5vh;
+  background-color: #EA5B0C;
+  font-weight: 700;
+  cursor: pointer;
+}
 /* SVG */
 
 .st0{opacity:0.7;fill:#E72B12;}
@@ -125,6 +154,18 @@ main {
 .st2{opacity:0.7;fill:#FF883C;}
 .st3{opacity:0.7;fill:#E75A12;}
 .st4{opacity:0.7;fill:#E1A216;}
+.st5{opacity:0.7;fill:#BF7901;}
+.st6{opacity:0.7;fill:#9D7301;}
+.st7{opacity:0.7;fill:#775201;}
+.st8{opacity:0.7;fill:#9D4749;}
+.st9{opacity:0.7;fill:#6E5A01;}
+.st10{opacity:0.7;fill:#79474F;}
+.st11{opacity:0.7;fill:#6A2F4E;}
+.st12{opacity:0.7;fill:#B86258;}
+.st13{opacity:0.7;fill:#9D3501;}
+.st14{opacity:0.7;fill:#BA5A01;}
+.st15{opacity:0.7;fill:#BB6372;}
+.st16{opacity:0.7;fill:#EA5816;}
 svg a:hover polygon{ opacity: 1; transition: all 0.5s ease; }
 text {
   fill: #fff;

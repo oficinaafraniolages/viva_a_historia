@@ -1,24 +1,41 @@
 $( document ).ready(function() {
 
-  function pageCall(page, div, extra){
+  $(window).bind('hashchange',function(){
+    hashCall();
+  });
+
+  function hashCall(){
+    let location = document.location.hash.substring(1);
+    switch (location.substring(0,2)){
+      case 'g_':
+        var link = "galerias/" + location.substring(2) + '.html';
+        break;
+      case 'v_':
+        var link = "videos/" + location.substring(2) + '.html';
+        break;
+      case '':
+        var link = 'main_home.html';
+        break;
+      default:
+        var link = location + '.html';
+    }
+    pageCall(link);
+  }
+
+  function pageCall(page){
     $.ajax({
       url: page,
       dataType: 'html',
       success: function(data) {
-         $(div).html(data);
+         $('main').html(data);
       },
       error: function() {
-         $('#notification-bar').text('An error occurred');
-      },
-      complete: function(){
-        if(extra){
-          pageCall(extra, 'main');
-        }
-        trigger();
-      }
+         pageCall('main_home.html')
+       }
    });
   }
 
+/*
   //  ajax trigger
   function trigger(){
     $('a').on('click', function(event){
@@ -43,6 +60,12 @@ $( document ).ready(function() {
     });
   }
 
-  trigger();
+  trigger(); */
+
+  hashCall();
+
+  $('.intro').on('click', function(){
+    $('.intro').fadeOut();
+  });
 
 });
