@@ -1,12 +1,13 @@
 $( document ).ready(function() {
 
+  var navigation = ['main_home.html'];
+
   $(window).bind('hashchange',function(){
     hashCall();
   });
 
   function hashCall(){
-    console.log(sessionStorage.getItem("last-url"));
-
+    console.log(navigation);
     let location = document.location.hash.substring(1);
     switch (location.substring(0,2)){
       case 'g_':
@@ -15,8 +16,18 @@ $( document ).ready(function() {
       case 'v_':
         var link = "videos/" + location.substring(2) + '.html';
         break;
+      case 't_':
+        var link = "textos/" + location.substring(2) + '.html';
+        break;
+      case 'a_':
+        var link = "audios/" + location.substring(2) + '.html';
+        break;
       case 'b_':
-        var link = sessionStorage.getItem("last-url").substring(1)  + '.html';
+        navigation.pop();
+        console.log(navigation[navigation.length-1]);
+        var link = navigation[navigation.length-1].substring(0,3) + '.html';
+        navigation.pop();
+        break;
       case '':
         var link = 'main_home.html';
         break;
@@ -24,7 +35,7 @@ $( document ).ready(function() {
         var link = location + '.html';
     }
     pageCall(link);
-    sessionStorage.setItem("last-url", document.location.hash);
+    navigation.push(document.location.hash);
   }
 
   function pageCall(page){
