@@ -5,6 +5,8 @@ $( document ).ready(function() {
   });
 
   function hashCall(){
+    console.log(sessionStorage.getItem("last-url"));
+
     let location = document.location.hash.substring(1);
     switch (location.substring(0,2)){
       case 'g_':
@@ -13,6 +15,8 @@ $( document ).ready(function() {
       case 'v_':
         var link = "videos/" + location.substring(2) + '.html';
         break;
+      case 'b_':
+        var link = sessionStorage.getItem("last-url").substring(1)  + '.html';
       case '':
         var link = 'main_home.html';
         break;
@@ -20,6 +24,7 @@ $( document ).ready(function() {
         var link = location + '.html';
     }
     pageCall(link);
+    sessionStorage.setItem("last-url", document.location.hash);
   }
 
   function pageCall(page){
