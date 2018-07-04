@@ -9,13 +9,17 @@
 body, html {
   font-family: 'Source Sans Pro', sans-serif;
   color: #fff;
+  width: 100vw;
+  height: 100vw;
+  overflow: hidden;
 }
 
 iframe{
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 50vh;
+  left: 50vw;
   margin-right: -50%;
+  margin-bottom: -50%;
   transform: translate(-50%, -50%);
   width: 177vh;
   height: 56vw;
@@ -38,7 +42,7 @@ header img{
 }
 
 header nav {
-  margin-top: -5px; /* Hack para sumir com espaço entre divs */
+  margin-top: -4px; /* Hack para sumir com espaço entre divs */
   padding: 4%;
   background-color: rgba(112, 46, 0, 0.4);
   text-align: right;
@@ -84,6 +88,7 @@ main {
   top:0; left:0;
   width: 100vw;
   height: 100vh;
+  overflow: auto;
 }
 
 .layer {
@@ -94,4 +99,44 @@ main {
   transform: translate(-50%, -50%);
   min-width: 100vw; min-height: 100vh;
   overflow: hidden;
+}
+
+.close {
+  position: absolute;
+  width: 3vw; height: 3vw;
+  top: 1.5vw; left: 1.5vw;
+  z-index: 999;
+  opacity: 0.6;
+  transition: all .5s ease;
+}
+.close:hover {
+  opacity: 1;
+}
+
+
+.csslider .close {
+  top: -1.5vw; left: -1.5vw;
+}
+
+/* SVG */
+
+.st0{opacity:0.7;fill:#E72B12;}
+.st1{opacity:0.7;fill:#9D4701;}
+.st2{opacity:0.7;fill:#FF883C;}
+.st3{opacity:0.7;fill:#E75A12;}
+.st4{opacity:0.7;fill:#E1A216;}
+svg a:hover polygon{ opacity: 1; transition: all 0.5s ease; }
+text {
+  fill: #fff;
+  font-weight: 700;
+}
+
+/* hacks */
+
+#WIX_ADS {
+  display: none;
+}
+
+.SITE_ROOT, .siteBackground, .siteBackgroundcurrent {
+  top: 0 !important;
 }
