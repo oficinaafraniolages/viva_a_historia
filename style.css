@@ -142,6 +142,20 @@ footer div img{
   opacity: 1;
 }
 
+/* especiais */
+
+.audio {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  margin-right: -50%;
+  margin-bottom: -50%;
+  transform: translate(-50%, -50%);
+  width: 60vw;
+  height: auto;
+  min-width: auto;
+  min-height: auto;
+}
 
 .csslider .close {
   top: -1.5vw; left: -1.5vw;
@@ -183,6 +197,10 @@ footer div img{
   max-height: 100vh;
   overflow-y: scroll;
   padding: 20vh 0;
+}
+
+.txtWrap img{
+  max-width: 100%;
 }
 
 .texto {

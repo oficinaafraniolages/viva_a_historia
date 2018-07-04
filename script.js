@@ -1,15 +1,16 @@
 $( document ).ready(function() {
 
-  var navigation = ['main_home.html'];
-
   $(window).bind('hashchange',function(){
     hashCall();
   });
 
   function hashCall(){
-    console.log(navigation);
     let location = document.location.hash.substring(1);
     switch (location.substring(0,2)){
+      case 'b_':
+        var para = true;
+        window.history.back();window.history.back();
+        break;
       case 'g_':
         var link = "galerias/" + location.substring(2) + '.html';
         break;
@@ -22,20 +23,13 @@ $( document ).ready(function() {
       case 'a_':
         var link = "audios/" + location.substring(2) + '.html';
         break;
-      case 'b_':
-        navigation.pop();
-        console.log(navigation[navigation.length-1]);
-        var link = navigation[navigation.length-1].substring(0,3) + '.html';
-        navigation.pop();
-        break;
       case '':
         var link = 'main_home.html';
         break;
       default:
         var link = location + '.html';
     }
-    pageCall(link);
-    navigation.push(document.location.hash);
+    if(!para){ pageCall(link); }
   }
 
   function pageCall(page){
