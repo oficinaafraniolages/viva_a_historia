@@ -175,8 +175,12 @@ footer div img{
   left: 0;
   width: 3vw;
   height: 3vw;
-  margin: 1vw
+  margin: 1vw;
+  opacity: 0.6;
+  transition: all .5s ease;
 }
+
+.mute:hover { opacity: 1; }
 
 .csslider .close {
   top: -1.5vw; left: -1.5vw;
