@@ -38,11 +38,19 @@ $( document ).ready(function() {
       dataType: 'html',
       success: function(data) {
          $('main').html(data);
+         toggleMute();
       },
       error: function() {
          pageCall('main_home.html')
        }
    });
+  }
+
+  function toggleMute(){
+      $('.mute').on('click', function(){
+        console.log('clicou');
+        $('audio').prop('muted', !$('audio').prop('muted'));
+      });
   }
 
   if(window.location.hash) { $('.intro').fadeOut(); hashCall();} //sem intro de eu ja for pra um pagina

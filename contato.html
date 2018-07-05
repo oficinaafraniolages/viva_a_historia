@@ -5,7 +5,7 @@
 <div class="layer txtWrap">
   <section class="texto">
     <p><b>Fale conosco</b></p>
-    <form id="usrform" action="https://formspree.io/eduardoliron@gmail.com" method="POST" target="_blank">
+    <form id="usrform" action="https://formspree.io/vivaahistoria2017@gmail.com" method="POST" target="_blank">
         <input type="email" placeholder="Seu Email" name="_replyto" />
         <input type="hidden" value="Viva a História – Email do Site" />
         <textarea name="comment" placeholder="Sua Mensagem" form="usrform"></textarea>
@@ -17,3 +17,18 @@
     <div><img src="Imgs/SVG/logo_algas.png" /></div>
   </footer>
 </div>
+<script type="text/javascript">
+$(function () {
+  $('#usrform').on('submit',function (e) {
+            $.ajax({
+              type: 'post',
+              url: 'https://formspree.io/eduardoliron@gmail.com',
+              data: $('#usrform').serialize(),
+              success: function () {
+               console.log("Email has been sent!");
+              }
+            });
+        e.preventDefault();
+      });
+});
+</script>
