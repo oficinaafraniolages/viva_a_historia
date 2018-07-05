@@ -168,6 +168,15 @@ footer div img{
   min-height: auto;
 }
 
+.mute {
+  position: absolute;
+  z-index: 999;
+  bottom: 0;
+  left: 0;
+  width: 2vw;
+  height: 2vw;
+}
+
 .csslider .close {
   top: -1.5vw; left: -1.5vw;
 }
