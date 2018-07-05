@@ -10,8 +10,12 @@ body, html {
   font-family: 'Source Sans Pro', sans-serif;
   color: #fff;
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
   overflow: hidden;
+}
+
+.envolucro {
+
 }
 
 p{
@@ -122,12 +126,10 @@ footer div img{
 
 .layer {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
   min-width: 100vw; min-height: 100vh;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .close {
@@ -244,3 +246,6 @@ text {
 .SITE_ROOT, .siteBackground, .siteBackgroundcurrent {
   top: 0 !important;
 }
+
+ @media screen and (orientation:portrait) {
+ }
