@@ -173,8 +173,9 @@ footer div img{
   z-index: 999;
   bottom: 0;
   left: 0;
-  width: 2vw;
-  height: 2vw;
+  width: 3vw;
+  height: 3vw;
+  margin: 1vw
 }
 
 .csslider .close {

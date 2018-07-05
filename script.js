@@ -48,7 +48,11 @@ $( document ).ready(function() {
 
   function toggleMute(){
       $('.mute').on('click', function(){
-        $(this).html('<img src="Imgs/SVG/muted.svg" />');
+        if(!$('audio').prop('muted')) {
+          $(this).html('<img src="Imgs/SVG/muted.svg" />');
+        } else {
+          $(this).html('<img src="Imgs/SVG/mute.svg" />');
+        }
         $('audio').prop('muted', !$('audio').prop('muted'));
       });
   }
