@@ -6,10 +6,9 @@
   <section class="texto">
     <p><b>Fale conosco</b></p>
     <form id="usrform" action="https://formspree.io/vivaahistoria2017@gmail.com" method="POST" target="_blank">
-        <input type="text" placeholder="Seu Nome" name="Nome" />
-        <input type="email" placeholder="Seu Email" name="_replyto" />
-        <input type="hidden" value="Viva a História – Email do Site" />
-        <textarea name="comment" placeholder="Sua Mensagem" form="usrform"></textarea>
+        <input type="text" placeholder="Seu Nome" name="nome" id="name" />
+        <input type="email" placeholder="Seu Email" name="_replyto" id="email" />
+        <textarea name="comment" placeholder="Sua Mensagem" form="usrform" id="comments"></textarea>
         <input type="submit" value="Enviar" name="_subject" />
     </form>
   </section>
@@ -21,15 +20,31 @@
 <script type="text/javascript">
 $(function () {
   $('#usrform').on('submit',function (e) {
+            console.log('esta indo');
+            e.preventDefault();
+
+            //get the name field value
+        		var name = $('#name').val();
+        		//get the name field value
+        		var email = $('#email').val();
+        		//get the comments
+        		var comments = $('#comments').val();
             $.ajax({
-              type: 'post',
               url: 'https://formspree.io/vivaahistoria2017@gmail.com',
-              data: $('#usrform').serialize(),
+              method: 'POST',
+              data: {
+                name:name,
+        				_replyto:email,
+        				 email:email,
+        				comments:comments,
+        				_subject:'Viva a História – Email do Site',
+              },
+			        dataType:"json",
               success: function () {
                $(".texto").html('<p><b>Obrigado!</b></p><p>Agora você precisa confirmar o envio na caixa de entrada do seu email.<br />Nós retornaremos assim que possível.</p>');
               }
             });
-        e.preventDefault();
+
       });
 });
 </script>
