@@ -45,36 +45,8 @@ $( document ).ready(function() {
    });
   }
 
-/*
-  //  ajax trigger
-  function trigger(){
-    $('a').on('click', function(event){
-      if ($(this).hasClass('main_link')){
-        var page = $(this).attr('xlink:href').substring(1) + ".html";
-        pageCall('default.html', 'body', page);
-      } else {
-        if($(this).attr('xlink:href')){
-          switch ($(this).attr('xlink:href').substring(1,3)) {
-              case 'g_':
-                  var page = "galerias/" + $(this).attr('xlink:href').substring(3) + ".html";
-                  break;
-              default:
-                  var page = $(this).attr('xlink:href').substring(1) + ".html";
-          }
-        } else {
-          var page = $(this).attr('href').substring(1) + ".html";
-        }
-        console.log(page);
-        pageCall(page, 'main');
-      }
-    });
-  }
-
-  trigger(); */
-
-  hashCall();
-
   $('.intro').on('click', function(){
+    pageCall('main_home.html')
     $('.intro').fadeOut();
   });
 
