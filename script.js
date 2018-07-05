@@ -45,7 +45,7 @@ $( document ).ready(function() {
    });
   }
 
-  if(window.location.hash) { $('.intro').fadeOut(); } //sem intro de eu ja for pra um pagina
+  if(window.location.hash) { $('.intro').fadeOut(); hashCall();} //sem intro de eu ja for pra um pagina
 
   $('.intro').on('click', function(){
     pageCall('main_home.html')
