@@ -25,7 +25,7 @@ $(function () {
               url: 'https://formspree.io/eduardoliron@gmail.com',
               data: $('#usrform').serialize(),
               success: function () {
-               console.log("Email has been sent!");
+               $(".texto").html('<p><b>Obrigado!</b><br />Nós retornaremos seu email assim que possível.</p>');
               }
             });
         e.preventDefault();
