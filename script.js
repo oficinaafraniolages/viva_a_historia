@@ -52,7 +52,7 @@ $( document ).ready(function() {
     $('.intro').fadeOut();
   });
 
-  $('#usrform')on("submit", function() {
+  $('#usrform').on("submit", function(ev) {
     $(".texto").html('<p><b>Obrigado!</b><br />Nós retornaremos seu email assim que possível.</p>');
   });
 
