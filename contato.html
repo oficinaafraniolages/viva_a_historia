@@ -34,12 +34,11 @@ $(function () {
               method: 'POST',
               data: {
                 name:name,
-        				_replyto:email,
-        				 email:email,
+        				email:email,
         				comments:comments,
         				_subject:'Viva a História – Email do Site',
               },
-			        dataType:"json",
+			        dataType: "json",
               success: function () {
                $(".texto").html('<p><b>Obrigado!</b></p><p>Agora você precisa confirmar o envio na caixa de entrada do seu email.<br />Nós retornaremos assim que possível.</p>');
               }
