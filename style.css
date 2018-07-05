@@ -104,7 +104,7 @@ footer {
   right: 0;
   width: 25vw;
   padding: 2vh 0;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(59,35,0,0.8);
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -121,7 +121,6 @@ footer div img{
   position: relative;
   width: 60vw;
   padding: 5vh 0;
-  background-color: rgba(59,35,0,0.8);
   margin: 0 auto;
 }
 
