@@ -14,13 +14,13 @@ body, html {
   overflow: hidden;
 }
 
-.envolucro {
-
-}
-
 p{
   padding: 1vh 0;
   line-height: 1.5em;
+}
+
+audio {
+  visibility: hidden;
 }
 
 iframe{
@@ -99,10 +99,12 @@ main {
 }
 
 footer {
-  width: 60vw;
-  padding: 5vh 0;
-  background-color: #000;
-  margin: 0 auto;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 25vw;
+  padding: 2vh 0;
+  background-color: rgba(0,0,0,0.5);
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -115,13 +117,12 @@ footer div img{
   width: 60%;
 }
 
-.into_footer {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 25vw;
-  padding: 2vh 0;
-  background-color: rgba(0,0,0,0.5);
+.about_footer {
+  position: relative;
+  width: 60vw;
+  padding: 5vh 0;
+  background-color: #000;
+  margin: 0 auto;
 }
 
 .layer {
