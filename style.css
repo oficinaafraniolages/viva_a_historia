@@ -279,4 +279,8 @@ text {
    .hidden {
      display: block;
    }
+
+   .intro section img {
+     width: 50vw;
+   }
  }
