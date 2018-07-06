@@ -312,13 +312,9 @@ ol {
   padding-left: 40px;
 }
 #slider1 {
-  margin: 20px;
+  margin: 10vh 20vw;
   font-family: 'Lato';
   position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
 }
 .scrollable p {
   padding: 30px;

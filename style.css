@@ -130,7 +130,7 @@ footer div img{
   position: relative;
   width: 60vw;
   padding: 3vh 0;
-  margin: 0 auto 8vh auto;
+  margin: 0 30vw 10vh 10vw;
 }
 
 .layer {
@@ -233,7 +233,7 @@ footer div img{
   color: #5F3000;
   width: 60vw;
   padding: 10vh 15vh;
-  margin: 0 auto;
+  margin: 0 30vw 0 10vw;
 }
 /* SVG */
 
