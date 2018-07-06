@@ -263,6 +263,10 @@ text {
 
 /* hacks */
 
+.hidden {
+  display: none;
+}
+
 #WIX_ADS {
   display: none;
 }
@@ -272,4 +276,7 @@ text {
 }
 
  @media screen and (orientation:portrait) {
+   .hidden {
+     display: block;
+   }
  }
