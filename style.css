@@ -282,5 +282,6 @@ text {
 
    .intro section img {
      width: 50vw;
+     margin: 0 25vw;
    }
  }
